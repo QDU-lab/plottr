@@ -165,6 +165,7 @@ def ppcolormesh_from_meshgrid(ax: Axes, x: np.ndarray, y: np.ndarray,
         return None
 
     im = ax.pcolormesh(x, y, z, **kw)
+    ax.grid(False)
     ax.set_xlim(x.min(), x.max())
     ax.set_ylim(y.min(), y.max())
     return im
